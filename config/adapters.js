@@ -29,7 +29,7 @@ module.exports.adapters = {
     host     : 'renegaded.zeus.feralhosting.com',
     port     : 31020,
     database : 'LLTS'
-  }
+  },
 
   // MySQL is the world's most popular relational database.
   // Learn more: http://en.wikipedia.org/wiki/MySQL
