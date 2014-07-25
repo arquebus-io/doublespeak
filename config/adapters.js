@@ -28,7 +28,7 @@ module.exports.adapters = {
     module   : 'sails-mysql',
     host     : 'renegaded.zeus.feralhosting.com',
     port     : 31020,
-    database : 'LLTS'
+    database : 'test'
   },
 
   // MySQL is the world's most popular relational database.
@@ -37,6 +37,6 @@ module.exports.adapters = {
 
     module: 'sails-mysql',
     host: 'localhost',
-    database: 'LLTS'
+    database: 'test'
   }
 };
