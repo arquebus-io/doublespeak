@@ -16,7 +16,7 @@ module.exports.adapters = {
 
   // If you leave the adapter config unspecified 
   // in a model definition, 'default' will be used.
-  'default': 'mysql',
+  'default': 'myLocalMySQLDatabase',
 
   // Persistent adapter for DEVELOPMENT ONLY
   // (data is preserved when the server shuts down)
@@ -37,6 +37,6 @@ module.exports.adapters = {
 
     module: 'sails-mysql',
     host: 'localhost',
-    database: 'test'
+    database: 'LLTS'
   }
 };
