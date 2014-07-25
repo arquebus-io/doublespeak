@@ -8,16 +8,14 @@
 
 module.exports = {
 
-  attributes: {
-  	
-  	/* e.g.
-  	nickname: 'string'
-  	*/
-    name: 'STRING',
-    frequency: {
-        type: 'INTEGER',
-        defaultsTo: 0
+    migrate: 'safe',
+    autoCreatedAt: false,
+    autoUpdatedAt: false,
+    attributes: {
+        name: 'STRING',
+        frequency: {
+            type: 'INTEGER',
+            defaultsTo: 0
+        }
     }
-  }
-
 };
