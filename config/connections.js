@@ -73,7 +73,6 @@ module.exports.connections = {
   * Run: npm install sails-postgresql                                        *
   *                                                                          *
   *                                                                          *
-  ***************************************************************************/
   somePostgresqlServer: {
     adapter: 'sails-postgresql',
     host: 'YOUR_POSTGRES_SERVER_HOSTNAME_OR_IP_ADDRESS',
@@ -81,7 +80,16 @@ module.exports.connections = {
     password: 'YOUR_POSTGRES_PASSWORD',
     database: 'YOUR_POSTGRES_DB'
   }
+  ***************************************************************************/
 
+  // MySQL is the world's most popular relational database.
+  // Learn more: http://en.wikipedia.org/wiki/MySQL
+  myLocalMySQLDatabase: {
+    adapter: 'sails-mysql',
+    host: 'localhost',
+    database: 'LearningLanguageThroughSubtitles',
+    user: 'root'
+  }
 
   /***************************************************************************
   *                                                                          *
