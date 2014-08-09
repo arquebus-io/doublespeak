@@ -34,22 +34,6 @@ module.exports.connections = {
 
   /***************************************************************************
   *                                                                          *
-  * MySQL is the world's most popular relational database.                   *
-  * http://en.wikipedia.org/wiki/MySQL                                       *
-  *                                                                          *
-  * Run: npm install sails-mysql                                             *
-  *                                                                          *
-  ***************************************************************************/
-  someMysqlServer: {
-    adapter: 'sails-mysql',
-    host: 'YOUR_MYSQL_SERVER_HOSTNAME_OR_IP_ADDRESS',
-    user: 'YOUR_MYSQL_USER',
-    password: 'YOUR_MYSQL_PASSWORD',
-    database: 'YOUR_MYSQL_DB'
-  },
-
-  /***************************************************************************
-  *                                                                          *
   * MongoDB is the leading NoSQL database.                                   *
   * http://en.wikipedia.org/wiki/MongoDB                                     *
   *                                                                          *
@@ -87,7 +71,7 @@ module.exports.connections = {
   myLocalMySQLDatabase: {
     adapter: 'sails-mysql',
     host: 'localhost',
-    database: 'LearningLanguageThroughSubtitles',
+    database: 'LearningLanguagesThroughSubtitles',
     user: 'root'
   }
 

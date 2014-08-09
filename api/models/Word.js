@@ -6,9 +6,15 @@
 */
 
 module.exports = {
-
-  attributes: {
-
-  }
+    migrate: 'safe',
+    autoCreatedAt: false,
+    autoUpdatedAt: false,
+    attributes: {
+        name: 'STRING',
+        frequency: {
+            type: 'INTEGER',
+            defaultsTo: 0
+        }
+    }
 };
 
