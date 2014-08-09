@@ -1,4 +1,3 @@
-doublespeak
-===========
+# doublespeak
 
-Language Learning through innovating means
+a [Sails](http://sailsjs.org) application
