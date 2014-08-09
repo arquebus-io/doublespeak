@@ -1,12 +1,12 @@
 /**
- * Translation
- *
- * @module      :: Model
- * @description :: A short summary of how this model works and what it represents.
- * @docs		:: http://sailsjs.org/#!documentation/models
- */
+* Dialog.js
+*
+* @description :: TODO: You might write a short summary of how this model works and what it represents here.
+* @docs        :: http://sailsjs.org/#!documentation/models
+*/
+
 /**
- * CREATE TABLE `translation` (
+ * CREATE TABLE `dialog` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `ru` text,
   `en` text,
@@ -20,7 +20,6 @@
 **/
 
 module.exports = {
-
     migrate: 'safe',
     autoCreatedAt: false,
     autoUpdatedAt: false,
