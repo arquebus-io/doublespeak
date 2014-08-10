@@ -39,7 +39,7 @@
 # 
 ################################################
 
-config/local.js
+backend/config/local.js
 
 
 
@@ -66,8 +66,10 @@ config/local.js
 # 
 ################################################
 
-node_modules
-bower_components
+frontend/node_modules
+frontend/bower_components
+backend/node_modules
+backend/bower_components
 
 
 
