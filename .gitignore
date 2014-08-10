@@ -68,10 +68,9 @@ backend/config/local.js
 
 frontend/node_modules
 frontend/bower_components
+frontend/dist
 backend/node_modules
 backend/bower_components
-
-
 
 
 ################################################
