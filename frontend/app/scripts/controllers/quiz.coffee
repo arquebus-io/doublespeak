@@ -8,5 +8,8 @@
  # Controller of the doublespeakApp
 ###
 angular.module('doublespeakApp')
-  .controller 'QuizCtrl', ($scope) ->
-    $scope.randomWord = "kto"
+  .controller 'QuizCtrl', ['$scope', 'Word', ($scope, Word) ->
+    Word.getRandom().then((word)->
+        $scope.randomWord = word
+    )
+  ]

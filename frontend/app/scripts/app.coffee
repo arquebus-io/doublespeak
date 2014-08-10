@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'restangular'
   ])
   .config ($routeProvider) ->
     $routeProvider
@@ -30,4 +31,5 @@ angular
         controller: 'QuizCtrl'
       .otherwise
         redirectTo: '/'
-
+  .config (RestangularProvider) ->
+    RestangularProvider.setBaseUrl('http://localhost:1337/')

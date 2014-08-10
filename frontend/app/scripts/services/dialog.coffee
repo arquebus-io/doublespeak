@@ -10,3 +10,4 @@
 angular.module('doublespeakApp')
   .service 'Dialog', ->
     # AngularJS will instantiate a singleton by calling "new" on this function
+

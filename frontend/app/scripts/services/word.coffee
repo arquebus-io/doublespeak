@@ -8,5 +8,10 @@
  # Service in the doublespeakApp.
 ###
 angular.module('doublespeakApp')
-  .service 'Word', ->
-    # AngularJS will instantiate a singleton by calling "new" on this function
+  .service 'Word', ['Restangular', (Restangular)->
+   # AngularJS will instantiate a singleton by calling "new" on this function
+   {
+       getRandom: (->
+           Restangular.one("word", Math.floor(Math.random() * 100)).get()
+       )
+   }]
