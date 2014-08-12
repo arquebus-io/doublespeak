@@ -1,2 +1,8 @@
-<h2>Word: {{randomWord.name}}</h2>
-<h5>Frequency: {{randomWord.frequency}}</h5>
+<h2>Word: {{randomHighFreqWord.name}}</h2>
+<h5>Frequency: {{randomHighFreqWord.frequency}}</h5>
+<h3>{{dialogs[0].ru}}</h3>
+<ul class="quiz-options">
+    <li ng-repeat="dialog in dialogs">
+        {{dialog.en}}
+    </li>
+</ul>

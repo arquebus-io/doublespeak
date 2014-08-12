@@ -31,7 +31,8 @@ module.exports = {
         query += match_string;
         query += ') AGAINST (';
         query += sails_mysql.escape(against_string);
-        query += ') ORDER BY RAND() LIMIT ' + sql_param.limit;
+        query += ') AND d.ru_word_length < 5'
+        query += ' ORDER BY RAND() LIMIT ' + sql_param.limit;
 
         dialog.query(query, function(err, words) {
             return res.send(words);
