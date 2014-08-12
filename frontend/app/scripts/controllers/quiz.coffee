@@ -13,7 +13,7 @@ angular.module('doublespeakApp')
         wordPromise = Word.getRandomByCutoff(200)
         wordPromise.then((word)->
             $scope.randomHighFreqWord = word
-            Dialog.getDialogsFromWord(word, 4).then((dialogs)->
+            Dialog.getDialogsFromWord(word.name, 'ru', 4).then((dialogs)->
                 $scope.dialogs = dialogs
             )
         )

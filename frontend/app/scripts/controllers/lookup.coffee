@@ -8,9 +8,11 @@
  # Controller of the doublespeakApp
 ###
 angular.module('doublespeakApp')
-  .controller 'LookupCtrl', ($scope) ->
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate'
-      'AngularJS'
-      'Karma'
-    ]
+  .controller 'LookupCtrl', ['$scope', 'Dialog', ($scope, Dialog) ->
+      console.log "lookup"
+      $scope.term = ""
+      $scope.search = ->
+        Dialog.getDialogsFromWord($scope.term, 'en', 50).then((dialogs)->
+            $scope.dialogs = dialogs
+        )
+  ]

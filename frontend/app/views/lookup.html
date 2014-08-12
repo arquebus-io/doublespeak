@@ -1,1 +1,15 @@
-<p>This is the lookup view.</p>
+<h1>Lookup</h1>
+
+<form ng-submit="search()" class="input-group">
+    <input type="search" class="form-control" placeholder="e.g. bitch" ng-model="term"/>
+    <span class="input-group-btn">
+        <button role="button" class="btn btn-primary">Search</button>
+    </span>
+</form>
+
+<ul class="results">
+    <li ng-repeat="dialog in dialogs">
+        <div>{{dialog.en}}</div>
+        <div>{{dialog.ru}}</div>
+    </li>
+</ul>

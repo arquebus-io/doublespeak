@@ -11,8 +11,8 @@ angular.module('doublespeakApp')
   .service 'Dialog', ['Restangular', (Restangular)->
     # AngularJS will instantiate a singleton by calling "new" on this function
     {
-        getDialogsFromWord: (word, count)->
-           Restangular.all('dialog').getList({ru: word.name, limit: count})
+        getDialogsFromWord: (word, lang, count)->
+           Restangular.all('dialog').getList({lang: lang, word:word, limit: count})
     }
   ]
 
