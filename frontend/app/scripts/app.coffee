@@ -29,6 +29,9 @@ angular
       .when '/quiz',
         templateUrl: 'views/quiz.html'
         controller: 'QuizCtrl'
+      .when '/lookup',
+        templateUrl: 'views/lookup.html'
+        controller: 'LookupCtrl'
       .otherwise
         redirectTo: '/'
   .config (RestangularProvider) ->
