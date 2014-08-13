@@ -2,4 +2,4 @@ language: node_js
 node_js:
   - "0.10"
 
-script: cd backend && npm install && npm test && cd ../frontend && npm install && npm test
+script: cd backend && npm install && npm test && cd ../frontend && npm install && bower install && grunt test
