@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'restangular'
+    'restangular',
+    'angular-loading-bar'
   ])
   .config ($routeProvider) ->
     $routeProvider
