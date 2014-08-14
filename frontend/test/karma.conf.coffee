@@ -23,6 +23,7 @@ module.exports = (config) ->
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/lodash/dist/lodash.compat.js',
       'bower_components/restangular/dist/restangular.js',
+      'bower_components/angular-loading-bar/build/loading-bar.js',
       'app/scripts/**/*.coffee'
       'test/mock/**/*.coffee'
       'test/spec/**/*.coffee'
