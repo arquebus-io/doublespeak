@@ -8,4 +8,4 @@ before_script:
   - gem update --system
   - gem install compass
 
-script: cd backend && npm install && npm test && cd ../frontend && npm install && bower install && grunt test
+script: cd backend && npm install && npm test && cd ../frontend && npm install && bower install && grunt test && grunt build
