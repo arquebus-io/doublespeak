@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <script src="bower_components/platform/platform.js"></script>
+
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
@@ -30,21 +31,15 @@
     <!--
     <div class="container">
       <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/quiz">Quiz</a></li>
-          <li><a ng-href="#/lookup">Lookup</a></li>
-          <li><a ng-href="#/about">About</a></li>
-        </ul>
         <h3 class="text-muted">DoubleSpeak</h3>
       </div>
       -->
-      <core-header-panel>
-            
+      <core-header-panel ng-controller="IndexCtrl">
         <core-toolbar>
-            <paper-tabs id="tabs" selected="all" self-end>
-                <paper-tab name="all">Home</paper-tab>
-                <paper-tab name="favorites">Quiz</paper-tab>
+            <paper-tabs id="tabs" selected="{{selectedTab}}" self-end>
+                <paper-tab name="/" ng-click="navigateTo('/')">Home</paper-tab>
+                <paper-tab name="/quiz" ng-click="navigateTo('/quiz')">Quiz</paper-tab>
+                <paper-tab name="/lookup" ng-click="navigateTo('/lookup')">Lookup</paper-tab>
             </paper-tabs>
         </core-toolbar>
 
@@ -54,7 +49,6 @@
       <div class="footer">
         <p><span class="glyphicon glyphicon-fire"></span> from the Designeer</p>
       </div>
-    </div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -112,6 +106,8 @@
         <script src="scripts/services/word.js"></script>
         <script src="scripts/services/dialog.js"></script>
         <script src="scripts/controllers/lookup.js"></script>
+        <script src="scripts/controllers/index.js"></script>
+        <script src="scripts/directives/ds-selected.js"></script>
         <!-- endbuild -->
 </body>
 </html>
