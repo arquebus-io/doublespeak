@@ -12,7 +12,7 @@ core-header-panel {
     -webkit-overflow-scrolling: touch; 
 }
 core-toolbar {
-    background: #03a9f4;
+    background: #068587;
     color: white;
 }
 #tabs {
@@ -27,4 +27,20 @@ core-toolbar {
 
 .footer {
     margin-top: 2em;
+}
+
+//LoadingBar Overrides
+#loading-bar {
+    .bar {
+        background-color: #ffff8d;
+    }
+    .peg {
+    }
+}
+//LoadingBar Overrides
+
+.lead {
+    img {
+        max-width: 100%
+    };
 }
