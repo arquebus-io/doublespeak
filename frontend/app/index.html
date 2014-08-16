@@ -27,16 +27,9 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <!--
-    <div class="container">
-      <div class="header">
-        <h3 class="text-muted">DoubleSpeak</h3>
-      </div>
-      -->
-      <core-header-panel ng-controller="IndexCtrl">
+    <core-header-panel ng-controller="IndexCtrl">
         <core-toolbar>
-            <paper-tabs id="tabs" selected="{{selectedTab}}" self-end>
+            <paper-tabs id="tabs" ds-selected="{{selectedTab}}" self-end>
                 <paper-tab name="/" ng-click="navigateTo('/')">Home</paper-tab>
                 <paper-tab name="/quiz" ng-click="navigateTo('/quiz')">Quiz</paper-tab>
                 <paper-tab name="/lookup" ng-click="navigateTo('/lookup')">Lookup</paper-tab>
@@ -44,11 +37,11 @@
         </core-toolbar>
 
         <div ng-view=""></div>
-      </core-header-panel>
 
-      <div class="footer">
+    </core-header-panel>
+    <footer class="footer">
         <p><span class="glyphicon glyphicon-fire"></span> from the Designeer</p>
-      </div>
+    </footer>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

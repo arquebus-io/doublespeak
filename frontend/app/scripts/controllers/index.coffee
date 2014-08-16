@@ -9,8 +9,7 @@
 ###
 angular.module('doublespeakApp')
   .controller 'IndexCtrl', ['$scope', '$location', ($scope, $location) ->
-    #$scope.selectedTab = $location.path()
-    $scope.selectedTab = 0
+    $scope.selectedTab = $location.path()
     $scope.navigateTo = (url)->
         $location.path(url)
   ]

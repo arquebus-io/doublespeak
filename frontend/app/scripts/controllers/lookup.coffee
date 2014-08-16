@@ -9,8 +9,6 @@
 ###
 angular.module('doublespeakApp')
   .controller 'LookupCtrl', ['$scope', 'Dialog', ($scope, Dialog) ->
-      console.log "lookup"
-      $scope.term = ""
       $scope.search = ->
         Dialog.getDialogsFromWord($scope.term, 'en', 50).then((dialogs)->
             $scope.dialogs = dialogs
