@@ -1,3 +1,55 @@
+/**
+ * Theme:
+ * #1A4F63
+ * #068587
+ * #6FB07F
+ * #FCB03C
+ * #FC5B3F
+ **/
+
+html,body {
+    height: 100%;
+    margin: 0;
+    background-color: #FEFFF0;
+    font-family: 'RobotoDraft', sans-serif;
+}
+
+//Polymer styles
+core-header-panel {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; 
+}
+core-toolbar {
+    background: #068587;
+    color: white;
+}
+#tabs {
+    width: 100%;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+//Polymer Styles End
+
 .footer {
     margin-top: 2em;
+}
+
+//LoadingBar Overrides
+#loading-bar {
+    .bar {
+        background-color: #ffff8d;
+    }
+    .peg {
+    }
+}
+//LoadingBar Overrides
+
+.lead {
+    img {
+        max-width: 100%
+    };
 }
