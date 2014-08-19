@@ -8,12 +8,19 @@
  **/
 
 $primary-color: #068587;
+$primary-bg-color: #FEFFF0;
+$primary-text-color: #1A4F63;
 
 html,body {
     height: 100%;
     margin: 0;
-    background-color: #FEFFF0;
+    background-color: $primary-bg-color;
     font-family: 'RobotoDraft', sans-serif;
+    color: $primary-text-color;
+}
+
+.jumbotron {
+    background-color: $primary-bg-color;
 }
 
 //Polymer styles
