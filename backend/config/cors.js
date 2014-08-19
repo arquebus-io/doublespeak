@@ -48,7 +48,7 @@ module.exports.cors = {
   ***************************************************************************/
 
   //origin: '*',
-  origin: 'http://doublespeak.designeer.us, http://designeer.github.io',
+  origin: 'http://doublespeak.designeer.us, http://designeer.github.io, http://localhost:9000, http://0.0.0.0:9000',
 
   /***************************************************************************
   *                                                                          *
