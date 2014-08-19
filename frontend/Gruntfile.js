@@ -384,6 +384,7 @@ module.exports = function (grunt) {
             'bower_components/font-roboto/*',
             'bower_components/core-header-panel/*',
             'bower_components/core-selection/*',
+            'bower_components/core-selector/*',
             'bower_components/core-toolbar/*',
             'bower_components/paper-tabs/*',
             'bower_components/paper-radio-group/*',
