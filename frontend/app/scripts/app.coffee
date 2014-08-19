@@ -36,4 +36,8 @@ angular
       .otherwise
         redirectTo: '/'
   .config (RestangularProvider) ->
-    RestangularProvider.setBaseUrl('http://backend.designeer.us/')
+    #I know not the best way to set the environment
+    if document.URL.indexOf("designeer") >= 0
+        RestangularProvider.setBaseUrl('http://backend.designeer.us/')
+    else
+        RestangularProvider.setBaseUrl('http://localhost:1337/')
