@@ -375,6 +375,22 @@ module.exports = function (grunt) {
           cwd: '.',
           src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
           dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
+          cwd: '.',
+          src: [
+            'bower_components/polymer/*',
+            'bower_components/platform/*',
+            'bower_components/font-roboto/*',
+            'bower_components/core-header-panel/*',
+            'bower_components/core-selection/*',
+            'bower_components/core-toolbar/*',
+            'bower_components/paper-tabs/*',
+            'bower_components/paper-radio-group/*',
+            'bower_components/paper-radio-button/*',
+            'bower_components/paper-ripple/*'
+            ],
+          dest: '<%= yeoman.dist %>'
         }]
       },
       styles: {

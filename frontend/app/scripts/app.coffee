@@ -36,4 +36,4 @@ angular
       .otherwise
         redirectTo: '/'
   .config (RestangularProvider) ->
-    RestangularProvider.setBaseUrl('http://localhost:1337/')
+    RestangularProvider.setBaseUrl('http://backend.designeer.us/')
