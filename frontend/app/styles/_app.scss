@@ -7,6 +7,8 @@
  * #FC5B3F
  **/
 
+$primary-color: #068587;
+
 html,body {
     height: 100%;
     margin: 0;
@@ -21,7 +23,7 @@ core-header-panel {
     -webkit-overflow-scrolling: touch; 
 }
 core-toolbar {
-    background: #068587;
+    background: $primary-color;
     color: white;
 }
 #tabs {
@@ -32,6 +34,16 @@ core-toolbar {
     -ms-user-select: none;
     user-select: none;
 }
+
+paper-radio-button {
+    display: block;
+    &::shadow {
+        #onRadio {
+            background-color: $primary-color;
+        }
+    }
+}
+
 //Polymer Styles End
 
 .footer {
@@ -52,4 +64,9 @@ core-toolbar {
     img {
         max-width: 100%
     };
+}
+
+article.quiz_challenge {
+    @include container(39em);
+    padding: 0em 1em;
 }

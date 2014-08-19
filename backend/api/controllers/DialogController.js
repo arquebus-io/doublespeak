@@ -29,7 +29,7 @@ module.exports = {
         query += ') AGAINST (';
         query += sails_mysql.escape(against_string);
         query += ') AND d.ru_word_length < 5'
-        query += ' ORDER BY RAND() LIMIT ' + limit;
+        query += ' LIMIT ' + limit;
 
         dialog.query(query, function(err, words) {
             return res.send(words);
