@@ -1,10 +1,12 @@
-<article class="quiz_challenge">
-    <h2>Word: {{randomHighFreqWord.name}}</h2>
-    <h5>Frequency: {{randomHighFreqWord.frequency}}</h5>
-    <form>
-        <h3>{{dialogs[0].ru}}</h3>
-        <paper-radio-group>
-            <paper-radio-button ng-repeat="dialog in dialogs" name="{{dialog.id}}" label="{{dialog.en}}"></paper-radio-button>
-        </paper-radio-group>
-    </form>
-</article>
+<section class="view-container">
+    <article class="quiz_challenge">
+        <h2>Word: {{randomHighFreqWord.name}}</h2>
+        <h5>Frequency: {{randomHighFreqWord.frequency}}</h5>
+        <form>
+            <h3>{{dialogs[0].ru}}</h3>
+            <paper-radio-group>
+                <paper-radio-button ng-repeat="dialog in dialogs" name="{{dialog.id}}" label="{{dialog.en}}"></paper-radio-button>
+            </paper-radio-group>
+        </form>
+    </article>
+</section>
