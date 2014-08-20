@@ -33,6 +33,7 @@ angular.module('doublespeakApp')
         angular.forEach(quiz.options, (option)->
             if option.selected and option.id == quiz.challenge.id
                 quiz.statusIcon = 'done'
+                $scope.regenerate()
         )
         if quiz.statusIcon != 'done'
             quiz.statusIcon = 'clear'
