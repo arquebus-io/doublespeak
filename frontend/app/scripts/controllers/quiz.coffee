@@ -41,9 +41,8 @@ angular.module('doublespeakApp')
     $scope.regenerate = ->
         wordPromise = Word.getRandomByCutoff(200)
         wordPromise.then((word)->
-            $scope.randomHighFreqWord = word
             Dialog.getDialogsFromWord(word.name, 'ru', 4).then((dialogs)->
-                $scope.quizzes.push({challenge: dialogs[0], options: shuffle(dialogs), selected: false, statusIcon: 'arrow-forward'})
+                $scope.quizzes.push({word: word, challenge: dialogs[0], options: shuffle(dialogs), selected: false, statusIcon: 'arrow-forward'})
             )
         )
 
