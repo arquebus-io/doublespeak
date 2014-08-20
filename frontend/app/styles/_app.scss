@@ -10,6 +10,9 @@
 $primary-color: #068587;
 $primary-bg-color: #FEFFF0;
 $primary-text-color: #1A4F63;
+$darker-bg-color: #E5CCA2;
+$alert-color: #FC5B3F;
+$success-color: #6FB07F;
 
 html,body {
     height: 100%;
@@ -51,6 +54,19 @@ paper-radio-button {
     }
 }
 
+paper-radio-group {
+    display: block;
+}
+
+paper-fab {
+    background: transparent;
+    &::shadow {
+        core-icon {
+            fill: $primary-text-color;
+        }
+    }
+}
+
 //Polymer Styles End
 
 .footer {
@@ -75,5 +91,14 @@ paper-radio-button {
 
 .view-container {
     @include container(39em);
-    padding: 0em 1em;
+    padding: 1em 1em;
+}
+
+article.quiz-challenge {
+    paper-fab.clear {
+        background: $alert-color;
+    }
+    paper-fab.done {
+        background: $primary-color;
+    }
 }
