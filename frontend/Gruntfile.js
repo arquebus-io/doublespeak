@@ -386,13 +386,21 @@ module.exports = function (grunt) {
             'bower_components/core-header-panel/*',
             'bower_components/core-selection/*',
             'bower_components/core-selector/*',
+            'bower_components/core-meta/*',
+            'bower_components/core-icon/*',
             'bower_components/core-icons/*',
+            'bower_components/core-iconset/*',
+            'bower_components/core-iconset-svg/*',
             'bower_components/core-toolbar/*',
             'bower_components/paper-tabs/*',
             'bower_components/paper-radio-group/*',
             'bower_components/paper-radio-button/*',
             'bower_components/paper-ripple/*',
-            'bower_components/paper-fab/*'
+            'bower_components/paper-focusable/*',
+            'bower_components/paper-shadow/*',
+            'bower_components/paper-fab/*',
+            'bower_components/paper-button/*',
+            'bower_components/paper-icon-button/*'
             ],
           dest: '<%= yeoman.dist %>'
         }]
