@@ -5,7 +5,7 @@ DoubleSpeak
 
 Language Learning through innovating means. This is an ongoing project which aims to create a platform which allows you to learn a new language with the help of engaging content(and some machine learning).
 
-![Screenshot of Quiz page](designeer.github.com/doublespeak/master/frontend/app/images/readme/screenshot-quiz.jpg)
+![Screenshot of Quiz page](https://raw.githubusercontent.com/designeer/doublespeak/master/frontend/app/images/readme/screenshot-quiz.jpg)
 
 Language supported: Russian
 
