@@ -361,6 +361,7 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
+            'CNAME',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
             'fonts/*'
@@ -385,11 +386,13 @@ module.exports = function (grunt) {
             'bower_components/core-header-panel/*',
             'bower_components/core-selection/*',
             'bower_components/core-selector/*',
+            'bower_components/core-icons/*',
             'bower_components/core-toolbar/*',
             'bower_components/paper-tabs/*',
             'bower_components/paper-radio-group/*',
             'bower_components/paper-radio-button/*',
-            'bower_components/paper-ripple/*'
+            'bower_components/paper-ripple/*',
+            'bower_components/paper-fab/*'
             ],
           dest: '<%= yeoman.dist %>'
         }]
