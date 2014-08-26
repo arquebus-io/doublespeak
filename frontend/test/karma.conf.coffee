@@ -24,6 +24,9 @@ module.exports = (config) ->
       'bower_components/lodash/dist/lodash.compat.js',
       'bower_components/restangular/dist/restangular.js',
       'bower_components/angular-loading-bar/build/loading-bar.js',
+      'bower_components/es5-shim/es5-shim.js',
+      'bower_components/pouchdb/dist/pouchdb-nightly.js',
+      'bower_components/angular-pouchdb/angular-pouchdb.js',
       'app/scripts/**/*.coffee'
       'test/mock/**/*.coffee'
       'test/spec/**/*.coffee'
