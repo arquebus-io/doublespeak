@@ -102,3 +102,9 @@ article.quiz-challenge {
         background: $primary-color;
     }
 }
+
+@include susy-breakpoint(30em, 8) {
+    .github_ribbon {
+        display: none;
+    }
+}
