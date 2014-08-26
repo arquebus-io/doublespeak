@@ -17,6 +17,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'restangular',
+    'pouchdb',
     'angular-loading-bar'
   ])
   .config ($routeProvider) ->
