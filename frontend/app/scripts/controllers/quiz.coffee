@@ -8,18 +8,7 @@
  # Controller of the doublespeakApp
 ###
 angular.module('doublespeakApp')
-  .controller 'QuizCtrl', ['$scope', 'Word', 'Dialog', ($scope, Word, Dialog) ->
-    shuffle = (array)->
-        currentIndex = array.length
-        while (0 != currentIndex)
-            randomIndex = Math.floor(Math.random() * currentIndex)
-            currentIndex -= 1
-
-            temporaryValue = array[currentIndex]
-            array[currentIndex] = array[randomIndex]
-            array[randomIndex] = temporaryValue
-        array
-
+  .controller 'QuizCtrl', ['$scope', 'Word', 'Dialog', 'Utilities', ($scope, Word, Dialog, Utilities) ->
     $scope.quizzes = []
     $scope.optionSelected = (quiz, option)->
         angular.forEach(quiz.options, (option)->
@@ -39,10 +28,11 @@ angular.module('doublespeakApp')
             quiz.statusIcon = 'clear'
 
     $scope.regenerate = ->
-        wordPromise = Word.getRandomByCutoff(200)
+        wordPromise = Word.getRandom({cutoff: 200})
         wordPromise.then((word)->
-            Dialog.getDialogsFromWord(word.name, 'ru', 4).then((dialogs)->
-                $scope.quizzes.push({word: word, challenge: dialogs[0], options: shuffle(dialogs), selected: false, statusIcon: 'arrow-forward'})
+            Dialog.getDialogsFromWord(word.name, 'ru').then((dialogs)->
+                console.log word
+                $scope.quizzes.push({word: word, challenge: dialogs[0], options: Utilities.shuffle(dialogs.slice(0, 4)), selected: false, statusIcon: 'arrow-forward'})
             )
         )
 

@@ -8,20 +8,9 @@
  # Controller of the doublespeakApp
 ###
 angular.module('doublespeakApp')
-  .controller 'LookupCtrl', ['$scope', 'Dialog', 'pouchdb', ($scope, Dialog, pouchdb) ->
+  .controller 'LookupCtrl', ['$scope', 'Dialog', 'pouchdb', 'Utilities', ($scope, Dialog, pouchdb, Utilities) ->
       $scope.search = ->
-        db = pouchdb.create('dialogs')
-        db.get($scope.term, false, (err, doc)->
-            if err
-                Dialog.getDialogsFromWord($scope.term, 'en', 10).then((dialogs)->
-                    $scope.dialogs = dialogs.plain()
-                    db.put({
-                        _id: $scope.term,
-                        dialogs: dialogs.plain()
-                    })
-                )
-            else
-                $scope.dialogs = doc.dialogs
-                $scope.$digest()
-        )
+          Dialog.getDialogsFromWord($scope.term, 'en').then((dialogs)->
+              $scope.dialogs = Utilities.shuffle(dialogs.slice(0,25))
+          )
   ]

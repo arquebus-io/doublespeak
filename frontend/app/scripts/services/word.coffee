@@ -11,7 +11,9 @@ angular.module('doublespeakApp')
   .service 'Word', ['Restangular', (Restangular)->
    # AngularJS will instantiate a singleton by calling "new" on this function
    {
-       getRandomByCutoff: ((cutoff)->
-           Restangular.one("word", Math.floor(Math.random() * cutoff)).get()
+       getRandom: ((options)->
+           if !options.cutoff
+               options.cutoff = 200
+           Restangular.one("word", Math.floor(Math.random() * options.cutoff)).get()
        )
    }]
