@@ -103,8 +103,12 @@ article.quiz-challenge {
     }
 }
 
-@include susy-breakpoint(30em, 8) {
+.github_ribbon {
+    display: none;
+}
+
+@include susy-breakpoint(39em, 8) {
     .github_ribbon {
-        display: none;
+        display: block;
     }
 }
