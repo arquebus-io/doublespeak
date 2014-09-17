@@ -11,6 +11,6 @@ angular.module('doublespeakApp')
   .service 'dbHelper', ->
     # AngularJS will instantiate a singleton by calling "new" on this function
     {
-        getIdFromLangWord: (word, lang)->
+        getIdFromLangWord: (lang, word)->
             lang + ":" + word
     }

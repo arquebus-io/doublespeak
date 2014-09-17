@@ -14,7 +14,7 @@ angular.module('doublespeakApp')
         getDialogsFromWord: (word, lang)->
             deferred = $q.defer()
             db = pouchdb.create('dialog')
-            db.get(dbHelper.getIdFromLangWord(word, lang), false, (err, doc)->
+            db.get(dbHelper.getIdFromLangWord(lang, word), false, (err, doc)->
                 if err
                     Restangular.all('dialog').getList({lang: lang, word:word, limit: 100}).then((dialogs)->
                         db.put({
